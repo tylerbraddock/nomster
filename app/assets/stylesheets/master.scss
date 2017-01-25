@@ -29,3 +29,18 @@ h1, h2, h3, h4, h5, h6 {
   background: image_url('black_thread.png');
   border-radius: 0;
 }
+
+.navbar-inverse .navbar-brand {
+  color: #B3502E; /*#B3502E*/ /*#4FB32E*/
+  font-family: 'black_jackregular', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+
+/*Below are changes to fix alignment issues caused by font choice/size. May change or remove later.*/
+.navbar-brand {
+  padding-top: .25rem;
+  padding-bottom: 0;
+}
