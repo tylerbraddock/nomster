@@ -38,6 +38,35 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: .5px;
 }
 
+.paginate {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.paginate a {
+  color: #B3502E;
+  text-decoration: none;
+}
+
+.pagination {
+  text-align: center;
+  display: inline-block;
+}
+
+.pagination .current {
+  padding: 0 12px 5px 12px;
+  background: grey;
+  color: white;
+  opacity: .80;
+  font-style: normal;
+}
+
+.pagination .disabled {
+  display: none;
+}
 
 /*Below are changes to fix alignment issues caused by font choice/size. May change or remove later.*/
 .navbar-brand {
