@@ -74,3 +74,31 @@ h1, h2, h3, h4, h5, h6 {
 .pagination .disabled {
   display: none;
 }
+
+button, input, optgroup, select, textarea {
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.btn {
+  background-color: #B3502E;
+  border-color: #B3502E;
+}
+
+.btn:hover {
+  background-color: #803820;
+  border-color: #522414;
+  cursor: pointer;
+}
+
+a {
+  color: #B3502E;
+}
+
+a:hover {
+  color: #522414;
+  text-decoration: none;
+}
+
+.form-control:focus {
+  border-color: #B3502E;
+}
