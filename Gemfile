@@ -53,10 +53,15 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use to allow for pagination
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
-#Use to create forms
+# Use to create forms
 gem 'simple_form'
 
 gem "font-awesome-rails"
 
 # User authentication
 gem 'devise'
+
+# Use for geocoding
+gem 'geocoder'
+
+gem "figaro"
