@@ -13,7 +13,7 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
 }
@@ -101,4 +101,11 @@ a:hover {
 
 .form-control:focus {
   border-color: #B3502E;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
 }
