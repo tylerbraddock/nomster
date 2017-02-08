@@ -82,6 +82,8 @@ button, input, optgroup, select, textarea {
 .btn {
   background-color: #B3502E;
   border-color: #B3502E;
+  color: white;
+  box-shadow: none;
 }
 
 .btn:hover {
@@ -90,11 +92,20 @@ button, input, optgroup, select, textarea {
   cursor: pointer;
 }
 
+.btn-primary:focus, .btn-secondary:focus, .btn-danger:focus {
+  box-shadow: 0 0 0 2px #522414;
+  color: white;
+}
+
+.btn-secondary:hover {
+  color: white;
+}
+
 a {
   color: #B3502E;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #522414;
   text-decoration: none;
 }
@@ -116,4 +127,29 @@ a:hover {
 
 .clear {
   clear: both;
+}
+
+.move-right {
+  text-align: right;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote no-close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
