@@ -68,26 +68,28 @@
   </div>
 </div>
 
-<div class="col-10 offset-1">
-  <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
-    Add a Comment
-  </button>
+<div class="col-10 offset-1 fix-pad">
+  <div class="text-center">
+    <h1 class="float-sm-left">Comments</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary float-sm-right" data-toggle="modal" data-target="#myModal">
+      Add a Comment
+    </button>
+  </div>
 </div>
 
 <div class="clear"></div>
 
 <div class="row">
-<% @place.comments.each do |comment| %>
-  <div class="col-12 col-sm-6">
-    <blockquote>
-      <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
-      <% end %>
-      <%= comment.message %>
-      <small><%= comment.user.email %></small>
-    </blockquote>
-  </div>
-<% end %>
+  <% @place.comments.each do |comment| %>
+    <div class="col-12 col-sm-6">
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
 </div>
