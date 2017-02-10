@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #B3502E; /*#B3502E*/ /*#4FB32E*/
+  color: #FF3B31;
   font-family: 'black_jackregular', sans-serif;
   font-size: 26px;
   font-weight: bold;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .paginate a {
-  color: #B3502E;
+  color: #FF3B31;
   text-decoration: none;
 }
 
@@ -79,39 +79,40 @@ button, input, optgroup, select, textarea {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
-.btn, .btn-primary:active, .btn-secondary:active, .btn-danger:active {
-  background-color: #B3502E;
-  border-color: #B3502E;
+.btn-primary, .btn-danger {
+  background-color: #FF3B31;
+  border-color: #FF3B31;
   color: white;
-  box-shadow: none;
+}
+.btn {
+  -moz-box-shadow: 1px 1px 1px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 1px 0 #d0d0d0;
+  box-shadow: 1px 1px 1px 0 #d0d0d0;
 }
 
-.btn:hover {
-  background-color: #803820;
-  border-color: #522414;
+.btn-primary:hover, .btn-danger:hover {
+  background-color: #BC3B31;
+  border-color: #BC3B31;
   cursor: pointer;
 }
 
-.btn-primary:focus, .btn-secondary:focus, .btn-danger:focus {
-  box-shadow: 0 0 0 2px #522414;
-  color: white;
-}
-
-.btn-secondary:hover {
+.btn-primary:focus, .btn-danger:focus {
+  box-shadow: 0 0 0 1px #BC3B31;
+  border-color: #FF3B31;
   color: white;
 }
 
 a {
-  color: #B3502E;
+  color: #FF3B31;
 }
 
 a:hover, a:focus {
-  color: #522414;
+  color: #BC3B31;
   text-decoration: none;
 }
 
 .form-control:focus {
-  border-color: #B3502E;
+  border-color: #FF3B31;
 }
 
 .help-block {
@@ -165,4 +166,29 @@ blockquote p {
 .fix-pad {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@media (max-width: 359px) {
+  .make-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .move-right {
+    text-align: center;
+  }
+}
+
+.place-adjust {
+  display: inline-block;
+  float: left
+}
+
+@include media-breakpoint-down(xs) {
+  .img-adjust {
+    margin-top: 24px;
+  }
 }

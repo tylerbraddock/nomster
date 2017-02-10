@@ -65,3 +65,9 @@ gem 'devise'
 gem 'geocoder'
 
 gem "figaro"
+
+# Use for image uploading
+gem 'carrierwave', '~> 1.0'
+
+# Use for carrierwave to Amazon S3 communication
+gem "fog"
