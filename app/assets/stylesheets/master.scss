@@ -192,3 +192,15 @@ blockquote p {
     margin-top: 24px;
   }
 }
+
+@media (min-width: 604px) and (max-width: 728px) {
+  .title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 729px) and (max-width: 767px) {
+  .title {
+    margin-bottom: 40px;
+  }
+}
