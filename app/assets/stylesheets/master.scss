@@ -209,6 +209,11 @@ blockquote p {
   width: 100%;
 }
 
+/*.trans {
+  transform: scaleY(1.25);
+  overflow: hidden !important;
+}*/
+
 @media (max-width: 449px) {
   .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
     max-height: 240px;
