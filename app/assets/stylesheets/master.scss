@@ -183,7 +183,7 @@ blockquote p {
 
 .place-adjust {
   display: inline-block;
-  float: left
+  float: left;
 }
 
 @include media-breakpoint-down(xs) {
