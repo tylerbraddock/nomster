@@ -35,7 +35,7 @@
 </div>
 
 <% @places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
+  <div class="booyah-box col-10 offset-1 gradient">
     <div class="<%= place.photos.present? ? 'col-12 col-sm-8 place-adjust title' : 'col-12' %>">
       <h1><%= link_to place.name, place_path(place) %></h1>
       <i><%= place.address %></i><br /><br />
@@ -61,13 +61,11 @@
             <b><%= place.comments.last.humanized_rating %></b> -
           <% end %>
           <%= place.comments.last.message %>
-          <small><%= place.comments.last.user.email %></small>
+          <small class="txt-adjust"><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
     <% end %>
   </div>
 <% end %>
 
-<div class="paginate col-10 offset-1">
-  <%= will_paginate @places %>
-</div>
+<%= paginate @places %>

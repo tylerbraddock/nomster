@@ -51,7 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Use to allow for pagination
-gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+#gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
 # Use to create forms
 gem 'simple_form'
@@ -71,3 +71,6 @@ gem 'carrierwave', '~> 1.0'
 
 # Use for carrierwave to Amazon S3 communication
 gem "fog"
+
+# Use for pagination
+gem 'kaminari'

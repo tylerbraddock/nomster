@@ -1,33 +1,75 @@
-<div class="booyah-box">
+<div class="booyah-box gradient">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4 offset-4 col-sm-4 offset-sm-0">
     <%= image_tag 'user.png', class: 'img-fluid' %>
     </div>
 
-    <div class="col-8 txt-adjust">
-      <h1><%= @user.email %></h1>
-      <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-      <h4><%= @user.comments.count %> total comments</h4>
-      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 Star reviews</h4>
+    <div class="col-12 col-sm-8 text-center text-sm-left">
+      <h2 class="txt-adjust"><%= @user.email.split('@')[0] %></h2>
+      <h5>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h5>
+      <h5><%= @user.comments.count %> total comments</h5>
+      <h5><%= @user.comments.where(rating: '5_stars').count %> total 5 Star reviews</h5>
     </div>
   </div>
   <div class="clear"></div>
 </div>
 
 <br /><br />
-<h1 class="text-center">My Comments</h1>
+<h2 class="text-center underline">My Comments</h2>
 <br /><br />
-<div class="row">
-  <% @user.comments.each do |comment| %>
-    <div class="col-12 col-sm-6">
-      <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
-      <blockquote>
-        <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b> -
-        <% end %>
-        <%= comment.message %>
-        <small><%= comment.user.email %></small>
-      </blockquote>
-    </div>
-  <% end %>
+
+<div class="booyah-box col-10 offset-1 gradient">
+  <div class="row">
+    <% @user.comments.each do |comment| %>
+      <div class="col-12 col-sm-6">
+        <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+        <blockquote>
+          <% if comment.humanized_rating.present? %>
+            <b><%= comment.humanized_rating %></b> -
+          <% end %>
+          <%= comment.message %>
+          <small class="txt-adjust"><%= comment.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+<div class="clear"></div>
+<br /><br />
+<h2 class="text-center underline">My Places</h2>
+<br /><br />
+
+<% @user.places.each do |place| %>
+  <div class="booyah-box col-10 offset-1 gradient">
+    <div class="<%= place.photos.present? ? 'col-12 col-sm-8 place-adjust title' : 'col-12' %>">
+      <h1><%= link_to place.name, place_path(place) %></h1>
+      <i><%= place.address %></i><br /><br />
+    </div>
+    <div class="col-12 col-md-8 place-adjust">
+      <p><%= place.description %></p><br />
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
+    </div>
+    <% if place.photos.present? %>
+      <div class="col-12 col-sm-4 offset-sm-8">
+        <%= image_tag place.photos.last.picture, class: 'img-fluid img-thumbnail img-adjust' %>
+      </div>
+    <% end %>
+
+    <div class="clear"></div>
+
+    <% if place.comments.present? %>
+      <div class="col-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <small class="txt-adjust"><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
+<% end %>

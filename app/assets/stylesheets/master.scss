@@ -18,6 +18,14 @@ body {
   padding: 20px;
 }
 
+.booyah-box a, .booyah-box button {
+  text-shadow: rgba(0, 0, 0, 0.95) 0.5px 0.5px 0.5px;
+}
+
+.booyah-no-shadow a {
+  text-shadow: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -44,34 +52,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0;
 }
 
-.paginate {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 22px;
+.page-link {
+  color: #292b2c;
+  background-color: #f9f9f9;
   font-weight: bold;
 }
+.page-item.active .page-link {
+  background-color: #FF3B31;
+  border-color: #FF3B31;
+}
 
-.paginate a {
+.page-link:focus, .page-link:hover {
   color: #FF3B31;
-  text-decoration: none;
 }
 
-.pagination {
-  text-align: center;
-  display: inline-block;
-}
-
-.pagination .current {
-  padding: 0 12px 5px 12px;
-  background: grey;
-  color: white;
-  opacity: .80;
-  font-style: normal;
-}
-
-.pagination .disabled {
-  display: none;
+.pag-pad {
+  padding-right: 0;
 }
 
 button, input, optgroup, select, textarea {
@@ -135,7 +131,7 @@ a:hover, a:focus {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #FF3B31;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -145,7 +141,7 @@ blockquote {
 }
 
 blockquote:before {
-  color: #ccc;
+  color: #FF3B31;
   content: open-quote no-close-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -190,6 +186,9 @@ blockquote p {
   .img-adjust {
     margin-top: 24px;
   }
+  .fix-margin {
+    margin-top: 5px;
+  }
 }
 
 @media (min-width: 604px) and (max-width: 728px) {
@@ -208,11 +207,6 @@ blockquote p {
   max-height: 550px;
   width: 100%;
 }
-
-/*.trans {
-  transform: scaleY(1.25);
-  overflow: hidden !important;
-}*/
 
 @media (max-width: 449px) {
   .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
@@ -266,6 +260,10 @@ blockquote p {
   .carousel-caption {
     font-size: 3.35rem;
   }
+  .trans {
+    transform: scaleY(1.25);
+    overflow: hidden;
+  }
 }
 
 .carousel-caption {
@@ -280,4 +278,24 @@ blockquote p {
 
 .carousel {
   box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.txt-adjust {
+  word-wrap: break-word;
+}
+
+.gradient {
+  background-image: linear-gradient(to top left, #C9C9C9, white);
+}
+
+.img-thumbnail {
+  background-color: #f9f9f9;
+}
+
+.fix-margin-top {
+  margin-top: 5px;
+}
+
+.underline {
+  text-decoration: underline;
 }
