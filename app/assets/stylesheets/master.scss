@@ -178,8 +178,8 @@ blockquote p {
 }
 
 .place-adjust {
-  display: inline-block;
   float: left;
+  z-index: 1;
 }
 
 @include media-breakpoint-down(xs) {
