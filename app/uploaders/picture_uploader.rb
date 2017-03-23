@@ -1,5 +1,12 @@
 class PictureUploader < CarrierWave::Uploader::Base
 
+  process :auto_orient
+  def auto_orient
+    manipulate! do |image|
+      image.tap(&:auto_orient)
+    end
+  end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
