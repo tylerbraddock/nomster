@@ -1,4 +1,4 @@
 # README
 
-"Coding is awesome!"
+"Coding really is awesome!"
 -Marco
